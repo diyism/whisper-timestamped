@@ -1,3 +1,10 @@
+    #似乎不支持python3.11, 只能先切换到3.10:
+    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
+    pip3 install dtw-python
+    pip3 install git+https://github.com/openai/whisper
+    pip3 install --upgrade --no-deps --force-reinstall git+https://github.com/linto-ai/whisper-timestamped
+    whisper_timestamped --vad True ./my_corpus/nihao_zhongguo.wav --model small --language zh
+
 # whisper-timestamped
 
 Multilingual Automatic Speech Recognition with word-level timestamps and confidence.
